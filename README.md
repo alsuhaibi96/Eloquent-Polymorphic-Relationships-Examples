@@ -7,6 +7,18 @@
   </p>
   
   <h4>1. Table schemas</h4>
+   <h5>Images:</h5>
+  <pre>
+   Schema::create('images', function (Blueprint $table) {
+            $table->id();
+            $table->string('url');
+            $table->integer('imageable_id');
+            $table->string('imageable_type');
+            $table->timestamps();
+        });
+  </pre>
+  
+  <h5>Users:</h5>
   <pre>
    Schema::create('users', function (Blueprint $table) {
             $table->id();
@@ -15,6 +27,16 @@
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
+            $table->timestamps();
+        });
+  </pre>
+  
+
+  <h5>Posts:</h5>
+  <pre>
+    Schema::create('posts', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
             $table->timestamps();
         });
   </pre>
