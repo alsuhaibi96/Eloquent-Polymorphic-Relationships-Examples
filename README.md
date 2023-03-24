@@ -19,7 +19,7 @@
         });
   </pre>
     
- <h4>Define the model definitions :</h4>
+ <h4>2. Define the model definitions :</h4>
  <h4>In User Model :</h4>
     <pre> 
     use Illuminate\Database\Eloquent\Model;
@@ -58,7 +58,7 @@
         return $this->morphTo();
     }
     </pre>
-   <h4>In  the the controllers you can retrieve the image this way  :</h4>
+   <h4>3.In the controllers you can retrieve the image this way  :</h4>
     <pre> 
      public function showPostImage()
     {
